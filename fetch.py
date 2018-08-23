@@ -1,4 +1,4 @@
-import requests
+import requests, json
 from bs4 import BeautifulSoup
 
 cookie = 'D573FDD6212E073FEA92DFD8CB11CF69.worker2'
@@ -7,15 +7,20 @@ url = 'https://erp.iitkgp.ac.in/Acad/timetable_track.jsp?action=second&dept={}'
 headers = {
 	'Cookie' : 'JSESSIONID={}'.format(cookie)
 }
+dataFileName = 'courses.json'
+depFileName = 'deps.txt'
 
-def getSlots(dep):
+def getData(dep):
 	response = requests.get(url.format(dep), headers=headers)
 
 	courses = []
 
 	soup = BeautifulSoup(response.text, 'html.parser')
-	parentTable = soup.find('table', {'id': 'disptab'})
-	rows = parentTable.find_all('tr')
+	try:
+		parentTable = soup.find('table', {'id': 'disptab'})
+		rows = parentTable.find_all('tr')
+	except:
+		return courses
 	for row in rows:
 		if 'bgcolor' in row.attrs:
 			continue 
@@ -35,5 +40,14 @@ def getSlots(dep):
 	return courses
 
 if __name__ == '__main__':
-	courses = getSlots('CS')
-	print(courses)
+	deps = []
+	with open(depFileName, 'r') as depFile:
+		for dep in depFile:
+			deps.append(dep[:2])
+
+	courses = []
+	for dep in deps:
+		courses.extend( getData(dep) )
+
+	with open(dataFileName, 'w') as dataFile:
+		json.dump(courses, dataFile)
