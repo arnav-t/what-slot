@@ -1,7 +1,7 @@
 import requests, json
 from bs4 import BeautifulSoup
 
-cookie = 'D573FDD6212E073FEA92DFD8CB11CF69.worker2'
+cookie = 'F8D06B8C66185BE893CC9838BE21E9E1.worker2'
 
 url = 'https://erp.iitkgp.ac.in/Acad/timetable_track.jsp?action=second&dept={}'
 headers = {
@@ -28,11 +28,19 @@ def getData(dep):
 		try:
 			course = {}
 			course['Name'] = f'{cells[0].text}: {cells[1].text}'
+			
 			data = {}
+			data['Faculty'] = cells[2].text
+			data['LTP'] = cells[3].text
 			data['Credits'] = cells[4].text
 			data['Slot'] = cells[5].text
+			try:
+				data['Room'] = cells[6].text
+			except:
+				pass
+
 			course['Data'] = data
-			print( course['Name'] + ' : ' + data['Credits'] + ' : ' + data['Slot'] )
+			print( course['Name'] )
 			courses.append(course)
 		except:
 			print('XXXXXXXXXX')
