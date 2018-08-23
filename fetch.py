@@ -1,11 +1,26 @@
 import requests
+from bs4 import BeautifulSoup
 
-cookie = 'B80F7769304DA4BAE3290ED2F8980DE0.worker2'
+cookie = 'D573FDD6212E073FEA92DFD8CB11CF69.worker2'
 
 url = 'https://erp.iitkgp.ac.in/Acad/timetable_track.jsp?action=second&dept={}'
 headers = {
 	'Cookie' : 'JSESSIONID={}'.format(cookie)
 }
 
-response = requests.get(url.format('BT'), headers=headers)
-print(response.text)
+def getSlots(dep):
+	response = requests.get(url.format(dep), headers=headers)
+	soup = BeautifulSoup(response.text, 'html.parser')
+	parentTable = soup.find('table', {'id': 'disptab'})
+	rows = parentTable.find_all('tr')
+	for row in rows:
+		if 'bgcolor' in row.attrs:
+			continue 
+		tds = row.find_all('td')
+		try:
+			print( tds[0].text + ' : ' + tds[1].text + ' : ' + tds[5].text )
+		except:
+			print('XXXXXXXXXX')
+
+if __name__ == '__main__':
+	getSlots('CS')
