@@ -10,17 +10,30 @@ headers = {
 
 def getSlots(dep):
 	response = requests.get(url.format(dep), headers=headers)
+
+	courses = []
+
 	soup = BeautifulSoup(response.text, 'html.parser')
 	parentTable = soup.find('table', {'id': 'disptab'})
 	rows = parentTable.find_all('tr')
 	for row in rows:
 		if 'bgcolor' in row.attrs:
 			continue 
-		tds = row.find_all('td')
+		cells = row.find_all('td')
 		try:
-			print( tds[0].text + ' : ' + tds[1].text + ' : ' + tds[5].text )
+			course = {}
+			course['Name'] = f'{cells[0].text}: {cells[1].text}'
+			data = {}
+			data['Credits'] = cells[4].text
+			data['Slot'] = cells[5].text
+			course['Data'] = data
+			print( course['Name'] + ' : ' + data['Credits'] + ' : ' + data['Slot'] )
+			courses.append(course)
 		except:
 			print('XXXXXXXXXX')
 
+	return courses
+
 if __name__ == '__main__':
-	getSlots('CS')
+	courses = getSlots('CS')
+	print(courses)
