@@ -14,5 +14,14 @@ def search():
 	results = searchData(query)
 	return json.dumps( [ course['Name'] for course in results ] )
 
+@app.route('/ajax/', methods=['POST'])
+def getCourse():
+	query = request.form.get('query')
+	results = searchData(query)
+	if results:
+		return json.dumps( results[0] )
+	else:
+		return json.dumps( {} )
+
 if __name__ == '__main__':
 	app.run(debug = True)
