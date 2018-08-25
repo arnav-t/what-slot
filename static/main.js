@@ -138,3 +138,49 @@ function toggle(el)
 }
 
 $( '#timet td' ).attr('onclick', 'toggle(this)');
+
+function readICS()
+{
+    var file = document.getElementById( 'file-in' ).files[0];
+    if(file)
+    {
+        $( '#timet td' ).removeClass('table-danger');
+        
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            var content = e.target.result;
+            var slots = content.split('DTSTART;TZID=Asia/Kolkata;VALUE=DATE-TIME:'); 
+            for ( i in slots )
+            {
+                var slot = slots[i];    
+                if( i > 0 )
+                { 
+                    var hour = parseInt( slot.substring(9, 11) );
+                    var year = parseInt( slot.substring(0,4) );
+                    var month = parseInt( slot.substring(4,6) ) - 1;
+                    var date = parseInt( slot.substring(6,8) );
+
+                    var d = new Date(year, month, date);
+
+                    var day = d.getDay() - 1;
+
+                    var duration = parseInt( slot.substring(28, 29) );
+
+                    if(hour < 14)
+                        hour -= 8;
+                    else 
+                        hour -= 9;
+
+                    for(var i = 0; i < duration; ++i)
+                    {
+                        var id = day.toString() + (hour + i).toString();
+                        $( '#' + id ).addClass( 'table-danger' );
+                    }
+
+                }
+            }
+        }
+        
+        reader.readAsText(file);
+    }
+}
