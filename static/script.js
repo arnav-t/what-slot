@@ -127,3 +127,14 @@ function loadMinor()
 }
 
 loadMinor();
+
+function toggle(el)
+{
+    element = $(el);
+    if(element.hasClass('bg-danger'))
+        element.removeClass('bg-danger');
+    else
+        element.addClass('bg-danger');
+}
+
+$( '#timet td' ).attr('onclick', 'toggle(this)');
