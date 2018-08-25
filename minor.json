@@ -60,6 +60,22 @@
 		]
 	},
 	{
+		"Name" : "Mathematics and Computing",
+		"Courses" : [
+			"MA41009",
+			"MA31005",
+			"MA20012",
+			"MA20013",
+			"MA41002",
+			"MA41003",
+			"MA30003",
+			"MA41004",
+			"MA41007",
+			"MA40001",
+			"MA51108"
+		]
+	}
+	{
 		"Name" : "Mechanical Engineering",
 		"Courses" : [
 			"ME30703",

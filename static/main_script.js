@@ -46,7 +46,7 @@ function sdCallback(data, id, course)
         {
             parentList = document.getElementById(id);
             var item = document.createElement('li');
-            item.className = "list-group-item";
+            item.className = "list-group-item list-group-item-action";
             item.setAttribute("onclick", "searchData(this)");
             item.innerHTML = course;
             parentList.appendChild(item);
