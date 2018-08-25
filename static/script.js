@@ -12,7 +12,7 @@ function clearTT()
     {
         for(var j = 0; j < 9; ++j)
         {
-            $( '#' + i.toString() + j.toString() ).removeClass('border border-info');
+            $( '#' + i.toString() + j.toString() ).removeClass('border border-warning');
             $( '#' + i.toString() + j.toString() ).html( '' );
         }
     }
