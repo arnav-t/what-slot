@@ -6,8 +6,8 @@ slotFileName = 'slots.1.txt'
 def slot2Time(slot):
 	with open(slotFileName, 'r') as slotFile:
 		for line in slotFile:
-			if slot == line[:2]:
-				return line[3:].split()
+			if line.startswith(slot):
+				return line.split()[1:]
 	return []
 
 def searchData(query):
