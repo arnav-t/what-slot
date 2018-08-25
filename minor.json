@@ -1,0 +1,85 @@
+[
+	{
+		"Name" : "Computer Science and Engineering",
+		"Courses" : [
+			"CS21003",
+			"CS29003",
+			"CS21002",
+			"CS29002",
+			"EC31003",
+			"EC39003",
+			"CS31702"
+		]
+	},
+	{
+		"Name" : "Electronics & Electrical Communication Engineering",
+		"Courses" : [
+			"EC21002",
+			"EC29002",
+			"EC31003",
+			"EC39003",
+			"EC21005",
+			"EC21007",
+			"EC21006",
+			"EC30001",
+			"EC31002",
+			"EC31004",
+			"EC31005",
+			"EC31006",
+			"EC31008"	
+		]
+	},
+	{
+		"Name" : "Electrical Engineering",
+		"Courses" : [
+			"EE21002",
+			"EE29002",
+			"EE33006",
+			"EE39006",
+			"EE33001",
+			"EE33008",
+			"EE30014",
+			"EE30010",
+			"EE40010",
+			"EE30012",
+			"EG43001",
+			"EE23001",
+			"IE23002",
+			"EE23001",
+			"EE29001",
+			"IE23002",
+			"IE29002",
+			"EE40013",
+			"EE40016",
+			"EE40016",
+			"PG18607",
+			"PG18609",
+			"IE40011",
+			"EE23002",
+			"EE33001"
+		]
+	},
+	{
+		"Name" : "Mechanical Engineering",
+		"Courses" : [
+			"ME30703",
+			"ME30704",
+			"ME39703",
+			"ME20701",
+			"ME20702",
+			"ME30705",
+			"ME30702",
+			"ME40701",
+			"ME39702",
+			"ME49701",
+			"ME20703",
+			"ME20704",
+			"ME30701",
+			"ME30708",
+			"ME30706",
+			"ME40703",
+			"ME39701",
+			"ME30706"
+		]
+	}
+]

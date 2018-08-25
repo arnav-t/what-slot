@@ -18,15 +18,12 @@ function clearTT()
     }
 }
 
-function searchData()
+function sdCallback(data, id, course)
 {
-    $.post("/ajax/",
-    {
-        query: $( "#search-bar" ).val()
-    },
-    function(data, status){
-        $( '#details-div' ).html("");
-        if( data['Name'] !== undefined )
+    $( '#details-div' ).html("");
+    if( typeof data['Name'] !== "undefined" )
+    {   
+        if(id === undefined)
         {
             var details = "";
             details += "<b>Name: </b>" + data['Name'] + " <br>";
@@ -45,6 +42,43 @@ function searchData()
                 $( '#' + courseData['Slot'][slot]).html( data['Name'].split(':')[0] )
             }
         }
+        else
+        {
+            parentList = document.getElementById(id);
+            var item = document.createElement('li');
+            item.className = "list-group-item";
+            item.setAttribute("onclick", "searchData(this)");
+            item.innerHTML = course;
+            parentList.appendChild(item);
+        }
+    }   
+}
+
+function clearSelected()
+{
+    $('.active').removeClass('active');
+}
+
+
+function searchData(q = $( "#search-bar" ).val(), id = undefined)
+{
+    var searchString = "";
+    clearSelected();
+    if(typeof q !== "string")
+    {
+        searchString = q.innerHTML; // Get list item's name
+        q.className += ' active';
+    }
+    else
+    {
+        searchString = q;
+    }
+    $.post("/ajax/",
+    {
+        "query": searchString
+    },
+    function(data) {
+        sdCallback(data, id, searchString);
     },
     "json"
     );
@@ -59,3 +93,37 @@ $( "#search-bar" ).on('keypress', function(e) {
         $(this).removeAttr("disabled");
     }
 });
+
+function loadMinor()
+{
+    $.get("/minor/", function(data) {
+        minorDiv = document.getElementById('minor-div');
+        var jdata = JSON.parse(data);
+        for (var i in jdata)
+        {
+            var minor = jdata[i];
+
+            // Create heading
+            var heading = document.createElement('h4');
+            heading.innerHTML = minor['Name'];
+            minorDiv.appendChild(heading);
+
+            // Create list
+            var list = document.createElement('ul');
+            list.className = "list-group";
+            list.id = i.toString();
+
+            // Populate list
+            for (var j in minor['Courses'])
+            {
+                course = minor['Courses'][j];
+                searchData( course, i.toString() );
+            }
+
+            // Add to page
+            minorDiv.appendChild(list);
+        }
+    });
+}
+
+loadMinor();

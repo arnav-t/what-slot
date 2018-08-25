@@ -2,6 +2,8 @@ from flask import Flask, render_template, request
 from search import searchData
 import json
 
+minorFileName = 'minor.json'
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -22,6 +24,12 @@ def getCourse():
 		return json.dumps( results[0] )
 	else:
 		return json.dumps( {} )
+
+@app.route('/minor/')
+def minor():
+	with app.open_resource(minorFileName, 'r') as minorFile:
+		data = json.load(minorFile)
+	return json.dumps( data )
 
 if __name__ == '__main__':
 	app.run(debug = True)
