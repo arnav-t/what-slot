@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 from search import searchData
-import json
+import json, os
 
 minorFileName = 'minor.json'
 
