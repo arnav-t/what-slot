@@ -38,7 +38,7 @@ function sdCallback(data, id, course)
             clearTT();
             for (var slot in courseData['Slot'])
             {
-                $( '#' + courseData['Slot'][slot]).addClass('border border-info');
+                $( '#' + courseData['Slot'][slot]).addClass('border border-warning');
                 $( '#' + courseData['Slot'][slot]).html( data['Name'].split(':')[0] )
             }
         }
@@ -131,10 +131,10 @@ loadMinor();
 function toggle(el)
 {
     element = $(el);
-    if(element.hasClass('bg-danger'))
-        element.removeClass('bg-danger');
+    if(element.hasClass('table-danger'))
+        element.removeClass('table-danger');
     else
-        element.addClass('bg-danger');
+        element.addClass('table-danger');
 }
 
 $( '#timet td' ).attr('onclick', 'toggle(this)');
