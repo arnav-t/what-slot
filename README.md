@@ -1,6 +1,8 @@
 # what-slot
-![Python](https://img.shields.io/badge/Made%20with-Python-blue.svg) 
-![Gitter](https://img.shields.io/gitter/room/:user/:repo.svg)
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)       
+![Gitter](https://img.shields.io/gitter/room/:user/:repo.svg)  
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
+
      
 Organize your time table for additional courses and minor.
 ## Usage
