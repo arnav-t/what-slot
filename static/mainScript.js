@@ -3,7 +3,7 @@ $( function() {
             source: "/search/",
             minLength: 3
         });
-    } 
+    }
 );
 
 function clearTT()
@@ -12,7 +12,7 @@ function clearTT()
     {
         for(var j = 0; j < 9; ++j)
         {
-            $( '#' + i.toString() + j.toString() ).removeClass('border border-warning');
+            $( '#' + i.toString() + j.toString() ).removeClass('border border-danger');
             $( '#' + i.toString() + j.toString() ).html( '' );
         }
     }
@@ -22,7 +22,7 @@ function sdCallback(data, id, course)
 {
     $( '#details-div' ).html("");
     if( typeof data['Name'] !== "undefined" )
-    {   
+    {
         if(id === undefined)
         {
             var details = "";
@@ -38,7 +38,7 @@ function sdCallback(data, id, course)
             clearTT();
             for (var slot in courseData['Slot'])
             {
-                $( '#' + courseData['Slot'][slot]).addClass('border border-warning');
+                $( '#' + courseData['Slot'][slot]).addClass('border border-danger');
                 $( '#' + courseData['Slot'][slot]).html( data['Name'].split(':')[0] )
             }
         }
@@ -51,7 +51,7 @@ function sdCallback(data, id, course)
             item.innerHTML = course;
             parentList.appendChild(item);
         }
-    }   
+    }
 }
 
 function clearSelected()
@@ -104,13 +104,15 @@ function loadMinor()
             var minor = jdata[i];
 
             // Create heading
-            var heading = document.createElement('h4');
+            var heading = document.createElement('h6');
+            heading.className = "card-sub-header";
             heading.innerHTML = minor['Name'];
+            heading.onclick = function() { $($(this)[0].nextElementSibling).toggleClass('d-none'); }; //onclick displays course list of each dept
             minorDiv.appendChild(heading);
 
             // Create list
             var list = document.createElement('ul');
-            list.className = "list-group";
+            list.className = "list-group d-none";
             list.id = i.toString();
 
             // Populate list
@@ -145,16 +147,16 @@ function readICS()
     if(file)
     {
         $( '#timet td' ).removeClass('table-danger');
-        
+
         var reader = new FileReader();
         reader.onload = function(e) {
             var content = e.target.result;
-            var slots = content.split('DTSTART;TZID=Asia/Kolkata;VALUE=DATE-TIME:'); 
+            var slots = content.split('DTSTART;TZID=Asia/Kolkata;VALUE=DATE-TIME:');
             for ( i in slots )
             {
-                var slot = slots[i];    
+                var slot = slots[i];
                 if( i > 0 )
-                { 
+                {
                     var hour = parseInt( slot.substring(9, 11) );
                     var year = parseInt( slot.substring(0,4) );
                     var month = parseInt( slot.substring(4,6) ) - 1;
@@ -168,7 +170,7 @@ function readICS()
 
                     if(hour < 14)
                         hour -= 8;
-                    else 
+                    else
                         hour -= 9;
 
                     for(var i = 0; i < duration; ++i)
@@ -180,7 +182,12 @@ function readICS()
                 }
             }
         }
-        
+
         reader.readAsText(file);
     }
+}
+//displays additional information on click
+function displayinfo()
+{
+    $('#details-div').toggleClass('d-none');
 }
