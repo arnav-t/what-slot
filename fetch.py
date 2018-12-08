@@ -1,17 +1,24 @@
-import requests, json
+import requests, json, os
 from bs4 import BeautifulSoup
 
-cookie = 'F8D06B8C66185BE893CC9838BE21E9E1.worker2'
+cookie = os.environ['JSESSIONID']  # 'F8D06B8C66185BE893CC9838BE21E9E1.worker2'
 
 url = 'https://erp.iitkgp.ac.in/Acad/timetable_track.jsp?action=second&dept={}'
 headers = {
 	'Cookie' : 'JSESSIONID={}'.format(cookie)
 }
+form = {
+	'for_session': '2018-2019',
+	'for_semester': 'SPRING',
+	'dept': '{}'
+}
 dataFileName = 'courses.json'
 depFileName = 'deps.txt'
 
 def getData(dep):
-	response = requests.get(url.format(dep), headers=headers)
+	global form 
+	form['dept'] = dep
+	response = requests.post(url.format(dep), headers=headers, data=form)
 
 	courses = []
 
