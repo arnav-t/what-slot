@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+
 	<title>what-slot</title>
 
 	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
@@ -13,15 +13,36 @@
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	  
 </head>
 <body>
-	<nav class="navbar navbar-expand-sm navbar-dark bg-dark text-light row">
-		<img class="col col-auto" src="{{ url_for('static', filename='logo.png') }}" height="64px">
-		<div class="input-group input-group-sm mb-3">
-			<input id="search-bar" type="text" class="form-control col col-auto" placeholder="Search for a course" aria-label="Search for a course" aria-describedby="basic-addon2">
-			<div class="input-group-append">
-		    	<button class="btn btn-outline-secondary" type="button" id="search-but">Search</button>
+	
+	
+	<nav class="navbar navbar-expand-sm navbar-dark bg-dark text-light row" style=' background: url("/static/whatslot.jpg"); height:350px; ' >
+		<a class="About" role="button" href="About.html" style="position: absolute; right: 2px; top: 5px; width:155px;font-size: 140%;font-family:sans-serif ;color: white;"><b>ABOUT US</b></a>
+		
+
+		<img class="col col-auto" src="/static/logo.png"  style="position:absolute; top:60px;right:670px; " height="150" width="150">
+		<div style="position: absolute;bottom:10px;left:20px;color: white;">
+			
+			    <h1><b>What-Slot</b></h1>
+			<h4>Get an insight of
+				available slots 
+				       
+			</h4>	        
+
+		</div>
+			
+		    
+		<div class="input-group input-group-sm mb-5 " style="height:60px;width:800px;margin-right: auto;
+  margin-left: auto;" >
+         
+			<input id="search-bar" type="text" class="form-control col col-auto" placeholder="Search for a course" aria-label="Search for a course" aria-describedby="basic-addon2" style='border-top-left-radius: 15px;border-bottom-left-radius: 15px;font-size: 115%;top:100px;' >
+			<div class="input-group-append" >
+		    	<button class="btn btn-info" type="button" id="search-but" style="border-top-right-radius: 15px; border-bottom-right-radius: 15px;
+    border: 1px white solid;width: 100px;font-size: 115%;top:100px;">Search</button>
 			</div>
+			
 		</div>
 	</nav>
 	<div class="row">
