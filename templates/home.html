@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+
 	<title>what-slot</title>
 
 	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
@@ -18,27 +18,29 @@
 <body>
 	
 	
-	<nav class="navbar navbar-expand-sm navbar-dark bg-dark text-light row" style=' background: url("/static/whatslot.jpg"); height:500px; ' >
-		<button type="button" class="btn btn-info" style="position: absolute; left: 5px; top: 5px; width:155px;font-size: 140%;font-family:georgia;"><b>ABOUT US</b></button>
-		<img class="col col-auto" src="/static/logo.jpg"  style="position:absolute; top:10px;right:10px; " height="105" width="105">
-		<!--<div>
-				<h2 style="color:black; top:50px;position: absolute; margin-left: 330px;
-    margin-bottom: 100px;
-    margin-top: 130px;font: 125%;"><b>Check your slot!</b></h2>
-		</div>--><div style="position: absolute;bottom:10px;left:20px;color: white;">
-			<h1>   What-Slot</h1>
-			<h2>Get an insight of</h2>
-			<div>
-			<h2>available slots</h2>
-			</div>
-		    </div>
+	<nav class="navbar navbar-expand-sm navbar-dark bg-dark text-light row" style=' background: url("/static/whatslot.jpg"); height:350px; ' >
+		<a class="About" role="button" href="About.html" style="position: absolute; right: 2px; top: 5px; width:155px;font-size: 140%;font-family:sans-serif ;color: white;"><b>ABOUT US</b></a>
+		
+
+		<img class="col col-auto" src="/static/logo.png"  style="position:absolute; top:60px;right:670px; " height="150" width="150">
+		<div style="position: absolute;bottom:10px;left:20px;color: white;">
+			
+			    <h1><b>What-Slot</b></h1>
+			<h4>Get an insight of
+				available slots 
+				       
+			</h4>	        
+
+		</div>
+			
+		    
 		<div class="input-group input-group-sm mb-5 " style="height:60px;width:800px;margin-right: auto;
   margin-left: auto;" >
          
-			<input id="search-bar" type="text" class="form-control col col-auto" placeholder="Search for a course" aria-label="Search for a course" aria-describedby="basic-addon2" style='border-top-left-radius: 15px;border-bottom-left-radius: 15px;font-size: 115%;' >
+			<input id="search-bar" type="text" class="form-control col col-auto" placeholder="Search for a course" aria-label="Search for a course" aria-describedby="basic-addon2" style='border-top-left-radius: 15px;border-bottom-left-radius: 15px;font-size: 115%;top:100px;' >
 			<div class="input-group-append" >
 		    	<button class="btn btn-info" type="button" id="search-but" style="border-top-right-radius: 15px; border-bottom-right-radius: 15px;
-    border: 1px white solid;width: 100px;font-size: 115%;">Search</button>
+    border: 1px white solid;width: 100px;font-size: 115%;top:100px;">Search</button>
 			</div>
 			
 		</div>
