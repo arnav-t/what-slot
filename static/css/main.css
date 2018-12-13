@@ -1,12 +1,18 @@
 
 
-@import url('https://fonts.googleapis.com/css?family=Unlock');
+@import url('https://fonts.googleapis.com/css?family=Vollkorn:400,900');
 body {
   font-family: sans-serif;
 }
 
 .unlockFont {
-  font-family: 'Unlock', cursive;
+  font-family: 'Vollkorn', serif;
+}
+
+.card{
+  border:0px;
+  border-right: 5px solid #c31432;
+  border-radius: 0px;
 }
 /*navbar*/
 
@@ -24,22 +30,21 @@ nav {
 }
 
 .brand {
-  height: 15vh;
-  width: 15vh;
-  -webkit-filter: drop-shadow(5px 5px 5px #FFF);
-  filter: drop-shadow(5px 5px 5px #FFF);
+  height: 10vh;
+  width: 10vh;
 }
 
 .captionn {
-  font-family: 'Unlock', cursive;
-  font-size: 5vh;
+  font-family: 'Vollkorn', serif;
+  font-weight: 900;
+  font-size: 3vh;
 }
 
 #search-bar {
   border-radius: 30px;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
-  height: 40px;
+  height: 35px;
 }
 
 #search-but {
@@ -62,7 +67,7 @@ nav {
 }
 
 .timetable .card-header {
-  font-family: 'Unlock', cursive;
+  font-family: 'Vollkorn', serif;
 }
 
 .timetable #details-div {
@@ -87,20 +92,19 @@ nav {
 /*courses list*/
 
 .courses {
-  background-color: black;
-  color: white;
-  border-radius: 0px;
+  color: black;
 }
 
 .courses .card-header {
-  font-family: 'Unlock', cursive;
+  font-family: 'Vollkorn', serif;
 }
 
 .courses .card-sub-header {
-  font-family: 'Unlock', cursive;
+  font-family: 'Vollkorn', serif;
   border: 1px solid #c31432;
   padding: 1rem;
   margin: 0px;
+  cursor: pointer;
 }
 
 .courses .list-group-item {
@@ -111,6 +115,7 @@ nav {
   font-family: sans-serif;
   font-weight: bold;
   font-size: 0.8rem;
+  cursor: pointer;
 }
 
 .courses .list-group-item:hover {
@@ -118,8 +123,13 @@ nav {
 }
 
 .courses .list-group-item.active {
-  border-color: #000;
-  border-style: dashed;
+  border:0px;
+  background: #c31432;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #240b36, #c31432);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #240b36, #c31432);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 #minor-div {
@@ -139,6 +149,6 @@ nav {
 #file-in {
   background: inherit;
   border: none;
-  color: #000;
-  font-family: 'Unlock', cursive;
+  color: #FFF;
+  font-family: 'Vollkorn', serif;
 }

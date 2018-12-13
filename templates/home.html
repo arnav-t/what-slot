@@ -18,11 +18,11 @@
 <body>
 	<div class="row m-0">
 		<nav class="navbar navbar-expand-sm navbar-dark bg-dark text-light">
-				<div class="row w-100 d-flex justify-content-center p-0 m-0 mb-lg-3 mt-lg-3">
+				<div class="row w-100 d-flex justify-content-center p-0 m-0 mb-lg-3 mt-lg-1">
 					<div class="col-2 col-lg-12 d-flex justify-content-center">
-							<span class="mt-4 d-none d-lg-block ml-1 mr-1 captionn">tah</span><img src="{{ url_for('static', filename='logo.png') }}" class="brand"><span class="mt-4 d-none d-lg-block ml-1 mr-1 captionn">lot</span>
+							<span class="mt-4 d-none d-lg-block ml-1 mr-1 captionn">TAH</span><img src="{{ url_for('static', filename='logo.png') }}" class="brand"><span class="mt-4 d-none d-lg-block ml-1 mr-1 captionn">LOT</span>
 					</div>
-					<div class="col-10 col-lg-8 mt-3 mb-1 mt-lg-5">
+					<div class="col-10 col-lg-8 mt-2 mb-1 mt-lg-4">
 						<div class="input-group input-group-sm ">
 							<input id="search-bar" type="text" class="form-control col col-auto" placeholder="Search for a course" aria-label="Search for a course" aria-describedby="basic-addon2">
 							<div class="input-group-append">
@@ -36,8 +36,8 @@
 
 
 	<div class="row m-0">
-		<div class="card col-8 p-0 timetable border-0">
-			<h4 class="card-header">Details<i class="fas fa-info-circle more-info" onclick="displayinfo()"></i></h4>
+		<div class="card col-8 p-0 timetable">
+			<h5 class="card-header">Details<i class="fas fa-info-circle more-info" onclick="displayinfo()"></i></h5>
 			<div class="card-body">
 				<div id="details-div" class="d-none"></div>
 
@@ -123,7 +123,7 @@
 			</div>
 				<div id="det-footer" class="card-footer	input-group m-0 mt-2">
 					<div class="row">
-						<h6 class="col-12 unlockFont text-light d-flex justify-content-center">Upload ICS file of your timetable from <a href="https://gyftkgp.herokuapp.com/" target="_blank">GYFT</a></h6>
+						<h6 class="col-12 unlockFont text-light">Upload ICS file of your timetable from <a href="https://gyftkgp.herokuapp.com/" target="_blank">GYFT</a></h6>
 						<input id="file-in" type="file" class="form-control col-auto" onchange="readICS()">
 					</div>
 				</div>
