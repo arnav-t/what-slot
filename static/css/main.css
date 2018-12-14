@@ -1,0 +1,154 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Vollkorn:400,900');
+body {
+  font-family: sans-serif;
+}
+
+.unlockFont {
+  font-family: 'Vollkorn', serif;
+}
+
+.card{
+  border:0px;
+  border-right: 5px solid #c31432;
+  border-radius: 0px;
+}
+/*navbar*/
+
+nav {
+  height: auto;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background: #c31432;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #240b36, #c31432);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #240b36, #c31432);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.brand {
+  height: 10vh;
+  width: 10vh;
+}
+
+.captionn {
+  font-family: 'Vollkorn', serif;
+  font-weight: 900;
+  font-size: 3vh;
+}
+
+#search-bar {
+  border-radius: 30px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  height: 35px;
+}
+
+#search-but {
+  color: white;
+  background: inherit;
+  border: 0.5px solid white;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  width: 50px;
+}
+
+#search-but:hover {
+  color: #c31432;
+  background: white;
+}
+/*table*/
+
+.timetable {
+  font-family: sans-serif;
+}
+
+.timetable .card-header {
+  font-family: 'Vollkorn', serif;
+}
+
+.timetable #details-div {
+  font-size: 0.8rem;
+}
+
+.timetable table {
+  font-size: 0.8rem;
+}
+
+.timetable .info {
+  color: #c31432;
+}
+
+.timetable .more-info {
+  float: right;
+}
+
+.timetable .more-info:hover {
+  text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+}
+/*courses list*/
+
+.courses {
+  color: black;
+}
+
+.courses .card-header {
+  font-family: 'Vollkorn', serif;
+}
+
+.courses .card-sub-header {
+  font-family: 'Vollkorn', serif;
+  border: 1px solid #c31432;
+  padding: 1rem;
+  margin: 0px;
+  cursor: pointer;
+}
+
+.courses .list-group-item {
+  padding: 5px;
+  border-radius: 0px;
+  background-color: #c31432;
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.courses .list-group-item:hover {
+  background-color: #000;
+}
+
+.courses .list-group-item.active {
+  border:0px;
+  background: #c31432;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #240b36, #c31432);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #240b36, #c31432);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#minor-div {
+  padding-top: 1.5rem;
+}
+
+/*footer form*/
+#det-footer {
+  background: #c31432;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #240b36, #c31432);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #240b36, #c31432);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#file-in {
+  background: inherit;
+  border: none;
+  color: #FFF;
+  font-family: 'Vollkorn', serif;
+}
