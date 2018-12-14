@@ -15,13 +15,15 @@
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 <body>
-	<nav class="navbar navbar-expand-sm navbar-dark bg-dark text-light row">
+	<nav class="navbar navbar-expand-sm navbar-dark bg-dark text-light row" >
 		<img class="col col-auto" src="{{ url_for('static', filename='logo.png') }}" height="64px">
-		<div class="input-group input-group-sm mb-3">
-			<input id="search-bar" type="text" class="form-control col col-auto" placeholder="Search for a course" aria-label="Search for a course" aria-describedby="basic-addon2">
+		<a href = "#" style="margin-left: 5%; color: white; font-size: 25px; font-family: times" >About</a>
+		<div class="input-group input-group-sm mb-3" style="width: 750px; margin-left: 10%; height:35px">
+			<input id="search-bar" type="text" class="form-control col col-auto" placeholder="Search for a course" aria-label="Search for a course" aria-describedby="basic-addon2" style="background-color: #F0F0F0;">
 			<div class="input-group-append">
-		    	<button class="btn btn-outline-secondary" type="button" id="search-but">Search</button>
+		    	<button class="btn btn-outline-secondary" type="button" id="search-but" style="font-size: 15px;color: white; font-family: times" >Search</button>
 			</div>
+			
 		</div>
 	</nav>
 	<div class="row">
