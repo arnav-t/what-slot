@@ -1,0 +1,451 @@
+@import url(https://fonts.googleapis.com/css?family=Merriweather:300,400,700);
+
+
+html {
+  line-height: 1.15;
+  
+  -ms-text-size-adjust: 100%;
+  
+  -webkit-text-size-adjust: 100%;
+   }
+
+
+body {
+  margin: 0; }
+
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block; }
+
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+
+figcaption,
+figure,
+main {
+  
+  display: block; }
+
+
+figure {
+  margin: 1em 40px; }
+
+
+hr {
+  box-sizing: content-box;
+  
+  height: 0;
+  
+  overflow: visible;
+   }
+
+
+pre {
+  font-family: monospace, monospace;
+ 
+  font-size: 1em;
+   }
+
+
+a {
+  background-color: transparent;
+  
+  -webkit-text-decoration-skip: objects;
+   }
+
+
+abbr[title] {
+  border-bottom: none;
+  
+  text-decoration: underline;
+  
+  text-decoration: underline dotted;
+   }
+
+
+b,
+strong {
+  font-weight: inherit; }
+
+
+b,
+strong {
+  font-weight: bolder; }
+
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+
+dfn {
+  font-style: italic; }
+
+
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+
+small {
+  font-size: 80%; }
+
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+
+audio,
+video {
+  display: inline-block; }
+
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+
+img {
+  border-style: none; }
+
+
+svg:not(:root) {
+  overflow: hidden; }
+
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  
+  font-size: 100%;
+  
+  line-height: 1.15;
+  
+  margin: 0;
+   }
+
+
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+
+button,
+select {
+  
+  text-transform: none; }
+
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */ }
+
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em; }
+
+
+legend {
+  box-sizing: border-box;
+  
+  color: inherit;
+  
+  display: table;
+  
+  max-width: 100%;
+  
+  padding: 0;
+  
+  white-space: normal;
+  }
+
+
+progress {
+  display: inline-block;
+  
+  vertical-align: baseline;
+   }
+
+
+textarea {
+  overflow: auto; }
+
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  
+  padding: 0;
+   }
+
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  
+  outline-offset: -2px;
+   }
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  
+  font: inherit;
+   }
+
+
+details,
+menu {
+  display: block; }
+
+
+summary {
+  display: list-item; }
+
+
+canvas {
+  display: inline-block; }
+
+
+template {
+  display: none; }
+
+
+[hidden] {
+  display: none; }
+
+
+body {
+  background-color: #111;
+  font-family: "Merriweather", Arial, "sans-serif";
+  color: #999;
+  font-size: 2rem;
+  line-height: 1.2em; }
+
+.wrapper {
+  margin-right: 50%;
+  padding: 5rem; }
+
+.left .wrapper {
+  margin-right: 0;
+  margin-left: 50%; }
+
+a, .page-link {
+  color: white;
+  font-weight: bold; }
+  a:hover, a:focus, a:active, .page-link:hover, .page-link:focus, .page-link:active {
+    color: #9fbfdf; }
+
+fieldset {
+  margin-bottom: 20px;
+  display: block;
+  border-top: 1px solid #ccc; }
+
+fieldset legend {
+  width: auto;
+  padding-right: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: bold; }
+
+table th {
+  background-color: #6699cc;
+  color: #fff;
+  border-color: #3973ac !important;
+  border-bottom: 1px solid #3973ac; }
+
+blockquote {
+  display: block;
+  border-left: 5px solid #444444;
+  padding: 0.5rem;
+  color: #999;
+  margin-bottom: 20px; }
+
+p {
+  margin: 0 0 20px; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #e6e6e6;
+  font-weight: bold;
+  margin: 0 0 20px; }
+
+h3 {
+  color: #8cb3d9; }
+
+
+#main-profile-image img {
+  max-width: 50%;
+  height: auto;
+  float: right;
+  position: fixed;
+  right: 0; }
+
+.left #main-profile-image img {
+  float: left;
+  right: auto;
+  left: 0; }
+
+header {
+  padding: 2.5rem 0; }
+
+header h1 {
+  color: #fff;
+  font-size: 6rem;
+  letter-spacing: -0.1rem;
+  line-height: 5rem; }
+
+header h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #8c8c8c; }
+
+
+footer {
+  background-color: #111;
+  border-top: 1px solid transparent;
+  color: #373737;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 1.25rem;
+  padding-top: 1.25rem; }
+
+footer p {
+  margin-bottom: 0; }
+
+footer a {
+  color: #444444;
+  font-weight: normal; }
+  footer a:hover, footer a:focus, footer a:active {
+    color: #5e5e5e; }
+
+
+.social-icons {
+  text-align: center;
+  font-size: 1.5rem; }
+
+.social-icons a {
+  margin: 0 20px;
+  color: #cccccc;
+  font-weight: normal; }
+  .social-icons a:hover, .social-icons a:focus, .social-icons a:active {
+    color: #79a6d2; }
+
+
+article {
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1.25rem;
+  font-size: 1.2rem; }
+
+article h2.article-title {
+  font-size: 3rem;
+  letter-spacing: -1px;
+  font-weight: 400; }
+
+article p.article-meta {
+  color: #ccc;
+  font-size: 1rem; }
+
+
+@media screen and (max-width: 1080px) {
+  body {
+    font-size: 1.7rem; }
+
+  header h1 {
+    font-size: 3.6rem;
+    line-height: 3rem; }
+
+  .wrapper {
+    padding: 3.3333333333rem; }
+
+  .social-icons {
+    font-size: 1.2rem; }
+
+  main {
+    line-height: 1.4em; } }
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 1.2rem; }
+
+  header {
+    padding: 1.25rem 0; }
+
+  header h1 {
+    font-size: 2.6rem;
+    line-height: 2rem; }
+
+  #main-profile-image {
+    height: 400px;
+    overflow: hidden; }
+
+  #main-profile-image img {
+    height: auto;
+    max-width: 100%;
+    position: relative;
+    float: none;
+    right: auto; }
+
+  .wrapper, .left .wrapper {
+    margin-right: 0;
+    margin-left: 0;
+    padding: 2.5rem; }
+
+  .social-icons {
+    font-size: 0.8rem; }
+
+  main {
+    line-height: 1.6em; } }
+@media screen and (max-width: 500px) {
+  #main-profile-image {
+    height: 250px; } }
