@@ -198,7 +198,8 @@ function toggleDarkLight()
     if(button == false)
     {
         button = true;
-        document.getElementById("night_mode").innerHTML = 'Turn off night mode';
+        document.getElementById("night_mode").innerHTML = '🌞';
+        $("#night_mode").css("font-size","20px");
         $(".card").css("background","#262626");
         $(".courses,.timetable").css("color","#eee");
         $(".card-header").css("background","rgb(83, 79, 79)");
@@ -219,7 +220,8 @@ function toggleDarkLight()
     else
     {
         button = false;
-        document.getElementById("night_mode").innerHTML = 'Turn on night mode';
+        document.getElementById("night_mode").innerHTML = '🌙';
+        $("#night_mode").css("font-size", "20px");        
         $(".card").css("background", "white");
         $(".courses,.timetable").css("color", "black");
         $("#search-bar").css("background", "white");
