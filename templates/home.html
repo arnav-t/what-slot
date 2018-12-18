@@ -10,6 +10,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -19,7 +20,7 @@
 	<div class="row m-0">
 		<nav class="navbar navbar-expand-sm navbar-dark bg-dark text-light">
 				<div class="row w-100 d-flex justify-content-center p-0 m-0 mb-lg-3 mt-lg-1">
-					<div class="col-2 col-lg-12 d-flex justify-content-center">
+					<div class="col-2 col-lg-12 d-flex justify-content-center">						
 							<span class="mt-4 d-none d-lg-block ml-1 mr-1 captionn">TAH</span><img src="{{ url_for('static', filename='logo.png') }}" class="brand"><span class="mt-4 d-none d-lg-block ml-1 mr-1 captionn">LOT</span>
 					</div>
 					<div class="col-10 col-lg-8 mt-2 mb-1 mt-lg-4">
@@ -27,6 +28,8 @@
 							<input id="search-bar" type="text" class="form-control col col-auto" placeholder="Search for a course" aria-label="Search for a course" aria-describedby="basic-addon2">
 							<div class="input-group-append">
 									<button type="button" id="search-but"><i class="fas fa-search"></i></button>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<button type="button" id="night_mode" onclick="toggleDarkLight()" title="Toggle dark/light mode">🌛</button>							
 							</div>
 						</div>
 					</div>
