@@ -1,7 +1,7 @@
 $( function() {
         $("#search-bar").autocomplete({
             source: "/search/",
-            minLength: 3
+            minLength: 3,            
         });
     }
 );
@@ -190,4 +190,51 @@ function readICS()
 function displayinfo()
 {
     $('#details-div').toggleClass('d-none');
+}
+//toggle night/light mode
+var button = false;
+function toggleDarkLight()
+{
+    if(button == false)
+    {
+        button = true;
+        document.getElementById("night_mode").innerHTML = 'Turn off night mode';
+        $(".card").css("background","#262626");
+        $(".courses,.timetable").css("color","#eee");
+        $(".card-header").css("background","rgb(83, 79, 79)");
+        $("#search-bar").css("background","black");
+        $("#search-bar").css("color", "white");
+        $("#night_mode").hover(function () {
+            $("#night_mode").css("background-color", "black");
+        }, function () {
+            $("#night_mode").css("background-color", "inherit");
+        });
+        $("#search-but").hover(function () {
+            $("#search-but").css("background-color", "black");
+        }, function () {
+            $("#search-but").css("background-color", "inherit");
+        });
+        
+    }
+    else
+    {
+        button = false;
+        document.getElementById("night_mode").innerHTML = 'Turn on night mode';
+        $(".card").css("background", "white");
+        $(".courses,.timetable").css("color", "black");
+        $("#search-bar").css("background", "white");
+        $("#search-bar").css("color", "black");
+        $(".card-header").css("background", "rgb(242, 242, 242)");
+        $("#night_mode").hover(function () {
+            $("#night_mode").css("background-color", "white");
+        }, function () {
+                $("#night_mode").css("background-color", "inherit");
+        });
+        $("#search-but").hover(function () {
+            $("#search-but").css("background-color", "white");
+        }, function () {
+            $("#search-but").css("background-color", "inherit");
+        });     
+      
+    }
 }
