@@ -8,7 +8,7 @@
 
 
         
-        <link rel="stylesheet" href="css/aboutpage.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/aboutpage.css') }}">
 
         
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -19,7 +19,7 @@
 
         
         <div id="main-profile-image">
-            <img src="hg.png" alt="Image" />
+            <img src="{{ url_for('static', filename='hg.png') }}" alt="Image" />
         </div>
         
         <div class="wrapper">

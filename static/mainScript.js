@@ -198,45 +198,45 @@ function toggleDarkLight()
     if(button == false)
     {
         button = true;
-        document.getElementById("night_mode").innerHTML = '🌞';
-        $("#night_mode").css("font-size","20px");
-        $(".card").css("background","#262626");
+        //document.getElementById("night_mode").innerHTML = '🌞';
+        //$("#night_mode").css("font-size","20px");
+        $(".card,body").css("background","#262626");
         $(".courses,.timetable").css("color","#eee");
         $(".card-header").css("background","rgb(83, 79, 79)");
         $("#search-bar").css("background","black");
         $("#search-bar").css("color", "white");
-        $("#night_mode").hover(function () {
+        /*$("#night_mode").hover(function () {
             $("#night_mode").css("background-color", "black");
         }, function () {
             $("#night_mode").css("background-color", "inherit");
-        });
+        });*/
         $("#search-but").hover(function () {
             $("#search-but").css("background-color", "black");
         }, function () {
             $("#search-but").css("background-color", "inherit");
-        });
+		});
         
     }
     else
     {
         button = false;
-        document.getElementById("night_mode").innerHTML = '🌙';
-        $("#night_mode").css("font-size", "20px");        
-        $(".card").css("background", "white");
+        //document.getElementById("night_mode").innerHTML = '🌙';
+        //$("#night_mode").css("font-size", "20px");        
+        $(".card,body").css("background", "white");
         $(".courses,.timetable").css("color", "black");
         $("#search-bar").css("background", "white");
         $("#search-bar").css("color", "black");
         $(".card-header").css("background", "rgb(242, 242, 242)");
-        $("#night_mode").hover(function () {
+        /*$("#night_mode").hover(function () {
             $("#night_mode").css("background-color", "white");
         }, function () {
                 $("#night_mode").css("background-color", "inherit");
-        });
+        });*/
         $("#search-but").hover(function () {
             $("#search-but").css("background-color", "white");
         }, function () {
             $("#search-but").css("background-color", "inherit");
-        });     
+		});     
       
     }
 }
