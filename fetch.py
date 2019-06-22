@@ -8,8 +8,8 @@ headers = {
 	'Cookie' : 'JSESSIONID={}'.format(cookie)
 }
 form = {
-	'for_session': '2018-2019',
-	'for_semester': 'SPRING',
+	'for_session': '2019-2020',
+	'for_semester': 'AUTUMN',
 	'dept': '{}'
 }
 dataFileName = 'courses.json'
