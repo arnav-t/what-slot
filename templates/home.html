@@ -1,51 +1,67 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>what-slot</title>
-	
+
 	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 
 	<!-- BOOTSTRAP -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+		crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+		crossorigin="anonymous"></script>
 
 	<!-- FONT AWESOME -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+		integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 
 	<!-- JQUERY -->
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+		crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-	
+
 	<!-- GOOGLE FONTS -->
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
 
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 </head>
+
 <body>
 	<div class="row m-0">
 		<nav class="navbar navbar-expand-sm navbar-dark bg-dark text-light">
-				<div class="row w-100 d-flex justify-content-center p-0 m-0 mb-lg-3 mt-lg-1">
-					<div class="col-2 col-lg-12 d-flex justify-content-center">						
-							<span class="mt-4 d-none d-lg-block ml-1 mr-1 captionn">TAH</span><img src="{{ url_for('static', filename='whatslot.png') }}" class="brand"><span class="mt-4 d-none d-lg-block ml-1 mr-1 captionn">LOT</span>
-					</div>
-					<div class="col-10 col-lg-8 mt-2 mb-1 mt-lg-4">
-						<div class="input-group input-group-sm ">
-							<input id="search-bar" type="text" class="form-control col col-auto" placeholder="Search for a course" aria-label="Search for a course" aria-describedby="basic-addon2">
-							<div class="input-group-append">
-									<button type="button" id="search-but"><i class="fas fa-search"></i></button>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-									<label class="switch">
-										<input type="checkbox" onclick="toggleDarkLight()">
-										<span class="slider round"></span>
-									</label>
-									<i class="fa fa-moon-o" aria-hidden="true"></i>		
-							</div>
+			<div class="row w-100 d-flex justify-content-center p-0 m-0 mb-lg-3 mt-lg-1">
+				<div class="col-2 col-lg-12 d-flex justify-content-center">
+					<span class="mt-4 d-none d-lg-block ml-1 mr-1 captionn">TAH</span><img
+						src="{{ url_for('static', filename='whatslot.png') }}" class="brand"><span
+						class="mt-4 d-none d-lg-block ml-1 mr-1 captionn">LOT</span>
+				</div>
+				<div class="col-10 col-lg-8 mt-2 mb-1 mt-lg-4">
+					<div class="input-group input-group-sm ">
+						<input id="search-bar" type="text" class="form-control col col-auto" placeholder="Search for a course"
+							aria-label="Search for a course" aria-describedby="basic-addon2">
+						<div class="input-group-append">
+							<button type="button" id="search-but"><i class="fas fa-search"></i></button>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<label class="switch">
+								<input type="checkbox" onclick="toggleDarkLight()">
+								<span class="slider round"></span>
+							</label>
+							<i class="fa fa-moon-o" aria-hidden="true"></i>
 						</div>
 					</div>
 				</div>
+			</div>
 		</nav>
 	</div>
 
@@ -136,12 +152,13 @@
 				</table>
 				<i class="info">Click on a slot to mark it as occupied</i>
 			</div>
-				<div id="det-footer" class="card-footer	input-group m-0 mt-2">
-					<div class="row">
-						<h6 class="col-12 unlockFont text-light">Upload ICS file of your timetable from <a href="https://gyftkgp.herokuapp.com/" target="_blank">GYFT</a></h6>
-						<input id="file-in" type="file" class="form-control col-auto" onchange="readICS()">
-					</div>
+			<div id="det-footer" class="card-footer	input-group m-0 mt-2">
+				<div class="row">
+					<h6 class="col-12 unlockFont text-light">Upload ICS file of your timetable from <a
+							href="https://gyftkgp.herokuapp.com/" target="_blank">GYFT</a></h6>
+					<input id="file-in" type="file" class="form-control col-auto" onchange="readICS()">
 				</div>
+			</div>
 
 		</div>
 		<div class="card col-4 p-0 courses">
@@ -151,4 +168,5 @@
 	</div>
 </body>
 <script src="{{ url_for('static', filename='mainScript.js') }}"></script>
+
 </html>

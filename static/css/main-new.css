@@ -1,10 +1,8 @@
-
-
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
 body {
 	font-family: 'Roboto', sans-serif;
 	-webkit-transition: .4s;
-	transition: .4s;
+  transition: .4s;
+  margin: 0;
 }
 
 .unlockFont {
@@ -15,53 +13,161 @@ body {
   border:0px;
   border-radius: 0px;
 }
+
+.App {
+  background: #f9f9f9;
+  display: flex;
+  height: 100vh;
+}
+
+.main-content {
+  width: 80vw;
+}
+
+.main-content .timetable {
+  background: #fff;
+  padding: 2rem 0 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.table td {
+  height: 8vh;
+  padding: 0;
+  text-align: center;
+  width: calc(60vw / 9);
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 6px;
+}
+
+.table th {
+  padding: 0.5rem;
+}
+footer {
+  display: flex;
+  flex-grow: 1;
+  background: #f9f9f9;
+  padding: 1rem;
+}
+
+footer .row {
+  width: 30vw;
+}
+
+aside {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  background: #ececec;
+}
+
+aside h1 {
+  font-weight: bolder;
+  font-size: 1.5rem;
+  padding: 3rem 0 0;
+  text-align: center;
+}
+
+
+.accordion {
+  color: #444;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  font-weight: lighter;
+  font-size: 1rem;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+  margin: 0;
+}
+
+.panel {
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.accordion svg {
+  height: 1.1rem;
+  vertical-align: middle;
+}
+
+.panel.open {
+  max-height: inherit;
+  transition: max-height 0.2s ease-out;
+}
+
+
+
 /*navbar*/
 
 nav {
-  height: 100%;
-  width: 100vw;
-  margin: 0;
-  padding: 0;
-  z-index: 999;
-  background: hsl(350, 62%, 25%);
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #240b36, #c31432);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #240b36, #c31432);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem;
+  color: #fff;
+  background: hsl(350, 83%, 57%);
 }
 
-.brand {
-  height: 10vh;
-  width: 10vh;
+nav .logo {
+  margin-right: auto;
 }
 
-.captionn {
-	font-family: 'Fjalla One', sans-serif;
-	font-weight: 900;
-	font-size: 3vh;
+nav a svg {
+  text-decoration: none;
+  color: #fff;
+}
+
+nav svg {
+  padding: 0 1rem;
+  color: #ffffffaa;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
 }
 
 #search-bar {
-	border-radius: 30px;
+  border-radius: 6px;
+  padding: 0 0 0 1rem;
 	border-top-right-radius: 0px;
 	border-bottom-right-radius: 0px;
 	height: 35px;
 	-webkit-transition: .4s;
-	transition: .4s;
+  transition: .4s;
+  background: #F5F5F5;
+  color: #2e2e2e;
+  border: none;
 }
 
 #search-but {
-	color: white;
-	background: inherit;
-	border: 0.5px solid white;
-	border-top-right-radius: 25px;
-	border-bottom-right-radius: 25px;
+  color: #9e9e9e;
+  background: #F5F5F5;
+	border: none;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
 	width: 50px;
-	height: 35px;
+  height: 35px;
+  font-size: 20px;
 	-webkit-transition: .4s;
 	transition: .4s;
 }
+
+#search-but svg {
+  height: 16px;
+}
+
+.search:focus-within #search-but {
+  color: hsl(350, 83%, 57%);
+}
+
 input[type=search] {
 	font-weight: bold;
 	border-color: #2e2e2e;
@@ -82,7 +188,7 @@ ul.ui-autocomplete {
 
 
 #search-but:hover {
-  color: #c31432;
+  color: hsl(350, 83%, 57%);
   background: white;
 }
 
@@ -90,8 +196,7 @@ ul.ui-autocomplete {
 
 .timetable {
   font-family: sans-serif;
-  border-radius: 4px;
-  box-shadow: -2px 0px 5px 1px;
+  padding: 2rem 0 0 4rem;
 }
 
 .timetable .card-header {
@@ -111,15 +216,11 @@ ul.ui-autocomplete {
   color: #c31432;
 }
 
-.timetable .more-info {
-  float: right;
-}
-
-.timetable .more-info:hover {
-  text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
-}
 .table .table-danger{
-  background-color: #f54c68;
+  background-color: hsl(350, 83%, 57%);
+}
+.border.border-danger {
+  box-shadow: inset 0 0 0px 4px hsl(350, 83%, 57%);
 }
 /* .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
   background-color: rgba(82, 78, 78, 0.493);
@@ -128,52 +229,39 @@ ul.ui-autocomplete {
 
 .courses {
   color: black;
-  box-shadow: 2px -5px 5px 1px;
 }
 
-
-.courses .card-header {
-  font-family: 'Roboto', serif;
+.panel.open {
+  list-style: none;
+  padding: 0.5rem;
+  border-radius: 6px;
 }
 
-.courses .card-sub-header {
-  font-family: 'Roboto', serif;
-  border: 1px solid #c31432;
-  padding: 1rem;
-  margin: 0px;
-  cursor: pointer;
-}
-.courses .card-sub-header:hover{
-  background-color: #f54c68;
+.course:hover{
+  background-color: #ececec;
 }
 
-.courses .list-group-item {
-  padding: 5px;
-  border-radius: 0px;
-  background-color: #c31432;
-  color: white;
+.course{
+  padding: 0.5rem;
+  margin: 2px 0px;
+  border-radius: 6px;
+  color: #2e2e2e;
   font-family: sans-serif;
   font-weight: bold;
   font-size: 0.8rem;
   cursor: pointer;
 }
 
-.courses .list-group-item:hover {
-  background-color: #000;
-}
-
-.courses .list-group-item.active {
+li.course.active {
   border:0px;
-  background: #c31432;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #240b36, #c31432);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #240b36, #c31432);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-color: hsl(350, 83%, 57%);
+  color: #fff;
 }
 
 #minor-div {
   padding-top: 1.5rem;
+  height: 70vh;
+  overflow-y: auto;
 }
 
 /*footer form*/
@@ -184,7 +272,6 @@ ul.ui-autocomplete {
 #file-in {
   background: inherit;
   border: none;
-  color: #FFF;
   font-family: 'Roboto', serif;
 }
 .ui-autocomplete{
@@ -196,7 +283,7 @@ ul.ui-autocomplete {
 .switch {
 	position: relative;
 	display: inline-block;
-	width: 60px;
+  width: 60px;
 	height: 34px;
   }
 
