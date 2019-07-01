@@ -1,5 +1,5 @@
 :root {
-  --main-color: hsl(350, 83%, 57%);
+  --main-color: #b039ff;
   --bg-color: #fff;
   --text-color: #2e2e2e;
   --search-color: #2e2e2e;
@@ -12,6 +12,8 @@ body {
   transition: .4s;
   margin: 0;
   background: var(--bg-color);
+  height: 100vh;
+  overflow: hidden;
 }
 
 .unlockFont {
@@ -177,14 +179,14 @@ nav svg {
 	height: 35px;
 	-webkit-transition: .4s;
   transition: .4s;
-  background: #ffffff66;
+  background: var(--bg-color);
   color: var(--text-color);
   border: none;
 }
 
 #search-but {
-  color: var(--search-color);
-  background: #F5F5F5;
+  color: var(--text-color);
+  background: var(--bg-color);
 	border: none;
 	border-top-right-radius: 6px;
 	border-bottom-right-radius: 6px;

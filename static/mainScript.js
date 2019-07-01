@@ -118,8 +118,13 @@ function loadMinor() {
 }
 
 loadMinor();
+setTimeout(
+    () => {
+        new SimpleBar($('.ui-menu')[0]);
 
-new SimpleBar($('#ui-id-1')[0]);
+    }, 1000
+
+)
 
 function toggle(el) {
     element = $(el);
@@ -176,9 +181,25 @@ function readICS() {
 
 //toggle night/light mode
 var button = false;
+var lightColors = [
+    '#ec3654',
+    '#36c1ec',
+    '#40d48f',
+    '#b535ff',
+    '#ff9913'
+], darkColors = [
+    '#12c571',
+    '#1886e0',
+    '#ff69b4',
+    '#e63b58',
+    '#b039ff'
+]
 function toggleDarkLight() {
+    var mainColor = lightColors[0];
     if (button) {
+        // Light mode colors
         button = false;
+        mainColor = lightColors[Math.floor(Math.random() * lightColors.length)];
         $(".courses,.timetable").css("color", "black");
 
         document.documentElement.style
@@ -191,6 +212,9 @@ function toggleDarkLight() {
     }
     else {
         button = true;
+        // Dark Mode colors
+        mainColor = darkColors[Math.floor(Math.random() * darkColors.length)];
+
         $(".courses,.timetable").css("color", "#eee");
         document.documentElement.style
             .setProperty('--bg-color', '#2F304D');
@@ -200,5 +224,7 @@ function toggleDarkLight() {
             .setProperty('--search-color', '#2e2e2e');
         console.log("Night");
     }
+    document.documentElement.style
+        .setProperty('--main-color', mainColor);
 }
 feather.replace()
