@@ -222,7 +222,6 @@ function toggleDarkLight() {
             .setProperty('--text-color', '#e0e0e0');
         document.documentElement.style
             .setProperty('--search-color', '#2e2e2e');
-        console.log("Night");
     }
     document.documentElement.style
         .setProperty('--main-color', mainColor);

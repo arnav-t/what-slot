@@ -7,22 +7,13 @@
 	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 
 	<!-- BOOTSTRAP -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-		crossorigin="anonymous"></script>
+
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
 		crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
 		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
 		crossorigin="anonymous"></script>
-
-	<!-- FONT AWESOME -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
-		integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-
 	<!-- JQUERY -->
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -32,64 +23,55 @@
 	<!-- GOOGLE FONTS -->
 
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+
+
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css">
+	<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
 
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 </head>
 
 <body>
-	<div class="row m-0">
-		<nav class="navbar navbar-expand-sm navbar-dark bg-dark text-light">
-			<div class="row w-100 d-flex justify-content-center p-0 m-0 mb-lg-3 mt-lg-1">
-				<div class="col-2 col-lg-12 d-flex justify-content-center">
-					<span class="mt-4 d-none d-lg-block ml-1 mr-1 captionn">TAH</span><img
-						src="{{ url_for('static', filename='whatslot.png') }}" class="brand"><span
-						class="mt-4 d-none d-lg-block ml-1 mr-1 captionn">LOT</span>
+
+	<div class="App">
+		<div class="main-content">
+
+			<nav>
+				<div class="logo">
+					<h1>What Slot</h1>
 				</div>
-				<div class="col-10 col-lg-8 mt-2 mb-1 mt-lg-4">
-					<div class="input-group input-group-sm ">
-						<input id="search-bar" type="text" class="form-control col col-auto" placeholder="Search for a course"
-							aria-label="Search for a course" aria-describedby="basic-addon2">
-						<div class="input-group-append">
-							<button type="button" id="search-but"><i class="fas fa-search"></i></button>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							<label class="switch">
-								<input type="checkbox" onclick="toggleDarkLight()">
-								<span class="slider round"></span>
-							</label>
-							<i class="fa fa-moon-o" aria-hidden="true"></i>
-						</div>
-					</div>
-				</div>
-			</div>
-		</nav>
-	</div>
+				<a href="https://github.com/arnav-t/what-slot/"> <i data-feather='github'></i> </a>
+				<i data-feather='sun'></i>
+				<label class="switch">
+					<input type="checkbox" onclick="toggleDarkLight()">
+					<span class="slider round"></span>
+				</label>
+				<i data-feather='moon'></i>
 
+			</nav>
 
-	<div class="row m-0">
-		<div class="card col-8 p-0 timetable">
-			<h5 class="card-header">Details<i class="fas fa-info-circle more-info" onclick="displayinfo()"></i></h5>
-			<div class="card-body">
-				<div id="details-div" class="d-none"></div>
-
-				<table class="table table-bordered table-hover table-responsive mb-0" id="timet">
+			<div class="timetable">
+				<table class="table " id="timet">
 					<thead>
 						<tr>
-							<th scope="col">Day</th>
-							<th scope="col">8:00 - 8:55</th>
-							<th scope="col">9:00 - 9:55</th>
-							<th scope="col">10:00 - 10:55</th>
-							<th scope="col">11:00 - 11:55</th>
-							<th scope="col">12:00 - 12:55</th>
-							<th scope="col">14:00 - 14:55</th>
-							<th scope="col">15:00 - 15:55</th>
-							<th scope="col">16:00 - 16:55</th>
-							<th scope="col">17:00 - 17:55</th>
+							<th scope="col"></th>
+							<th scope="col">8:00 <br /> 8:55</th>
+							<th scope="col">9:00 <br /> 9:55</th>
+							<th scope="col">10:00 <br /> 10:55</th>
+							<th scope="col">11:00 <br /> 11:55</th>
+							<th scope="col">12:00 <br /> 12:55</th>
+							<th scope="col">14:00 <br /> 14:55</th>
+							<th scope="col">15:00 <br /> 15:55</th>
+							<th scope="col">16:00 <br /> 16:55</th>
+							<th scope="col">17:00 <br /> 17:55</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<th scope="row">Mon</th>
+							<th scope="row">Monday</th>
 							<td id="00"></td>
 							<td id="01"></td>
 							<td id="02"></td>
@@ -101,7 +83,7 @@
 							<td id="08"></td>
 						</tr>
 						<tr>
-							<th scope="row">Tue</th>
+							<th scope="row">Tuesday</th>
 							<td id="10"></td>
 							<td id="11"></td>
 							<td id="12"></td>
@@ -113,7 +95,7 @@
 							<td id="18"></td>
 						</tr>
 						<tr>
-							<th scope="row">Wed</th>
+							<th scope="row">Wednesday</th>
 							<td id="20"></td>
 							<td id="21"></td>
 							<td id="22"></td>
@@ -125,7 +107,7 @@
 							<td id="28"></td>
 						</tr>
 						<tr>
-							<th scope="row">Thu</th>
+							<th scope="row">Thursday</th>
 							<td id="30"></td>
 							<td id="31"></td>
 							<td id="32"></td>
@@ -137,7 +119,7 @@
 							<td id="38"></td>
 						</tr>
 						<tr>
-							<th scope="row">Fri</th>
+							<th scope="row">Friday</th>
 							<td id="40"></td>
 							<td id="41"></td>
 							<td id="42"></td>
@@ -150,22 +132,33 @@
 						</tr>
 					</tbody>
 				</table>
-				<i class="info">Click on a slot to mark it as occupied</i>
-			</div>
-			<div id="det-footer" class="card-footer	input-group m-0 mt-2">
-				<div class="row">
-					<h6 class="col-12 unlockFont text-light">Upload ICS file of your timetable from <a
-							href="https://gyftkgp.herokuapp.com/" target="_blank">GYFT</a></h6>
-					<input id="file-in" type="file" class="form-control col-auto" onchange="readICS()">
-				</div>
 			</div>
 
+			<footer>
+				<div class="row">
+					<i class="info">Click on a slot to mark it as occupied</i>
+					<h4 class="unlockFont">Upload ICS file of your timetable from <a href="https://gyftkgp.herokuapp.com/"
+							target="_blank">GYFT</a></h4>
+					<input id="file-in" type="file" class="form-control col-auto" onchange="readICS()">
+				</div>
+				<div id="details-div"></div>
+
+			</footer>
+
+
 		</div>
-		<div class="card col-4 p-0 courses">
-			<h5 class="card-header">Minor courses available this semester</h5>
-			<div id="minor-div" class="card-body"></div>
-		</div>
+		<aside class="sidebar">
+			<div class="Courses">
+				<div class="search">
+					<input id="search-bar" placeholder="Search for courses">
+					<button type="button" id="search-but"><i data-feather="search"></i></button>
+				</div>
+				<h1>Minor Courses</h1>
+				<div id="minor-div"></div>
+			</div>
+		</aside>
 	</div>
+
 </body>
 <script src="{{ url_for('static', filename='mainScript.js') }}"></script>
 
