@@ -119,6 +119,8 @@ function loadMinor() {
 
 loadMinor();
 
+new SimpleBar($('#ui-id-1')[0]);
+
 function toggle(el) {
     element = $(el);
     if (element.hasClass('table-danger'))
@@ -175,47 +177,28 @@ function readICS() {
 //toggle night/light mode
 var button = false;
 function toggleDarkLight() {
-    if (button == false) {
-        button = true;
-        //document.getElementById("night_mode").innerHTML = '🌞';
-        //$("#night_mode").css("font-size","20px");
-        $(".card,body").css("background", "#262626");
-        $(".courses,.timetable").css("color", "#eee");
-        $(".card-header").css("background", "rgb(83, 79, 79)");
-        $("#search-bar").css("background", "black");
-        $("#search-bar").css("color", "white");
-        /*$("#night_mode").hover(function () {
-            $("#night_mode").css("background-color", "black");
-        }, function () {
-            $("#night_mode").css("background-color", "inherit");
-        });*/
-        $("#search-but").hover(function () {
-            $("#search-but").css("background-color", "black");
-        }, function () {
-            $("#search-but").css("background-color", "inherit");
-        });
+    if (button) {
+        button = false;
+        $(".courses,.timetable").css("color", "black");
 
+        document.documentElement.style
+            .setProperty('--bg-color', 'white');
+        document.documentElement.style
+            .setProperty('--text-color', '#2e2e2e');
+
+        document.documentElement.style
+            .setProperty('--search-color', '#2e2e2e');
     }
     else {
-        button = false;
-        //document.getElementById("night_mode").innerHTML = '🌙';
-        //$("#night_mode").css("font-size", "20px");
-        $(".card,body").css("background", "white");
-        $(".courses,.timetable").css("color", "black");
-        $("#search-bar").css("background", "white");
-        $("#search-bar").css("color", "black");
-        $(".card-header").css("background", "rgb(242, 242, 242)");
-        /*$("#night_mode").hover(function () {
-            $("#night_mode").css("background-color", "white");
-        }, function () {
-                $("#night_mode").css("background-color", "inherit");
-        });*/
-        $("#search-but").hover(function () {
-            $("#search-but").css("background-color", "white");
-        }, function () {
-            $("#search-but").css("background-color", "inherit");
-        });
-
+        button = true;
+        $(".courses,.timetable").css("color", "#eee");
+        document.documentElement.style
+            .setProperty('--bg-color', '#2F304D');
+        document.documentElement.style
+            .setProperty('--text-color', '#e0e0e0');
+        document.documentElement.style
+            .setProperty('--search-color', '#2e2e2e');
+        console.log("Night");
     }
 }
 feather.replace()
