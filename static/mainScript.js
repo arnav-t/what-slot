@@ -92,7 +92,22 @@ function loadMinor() {
             var heading = document.createElement('h3');
             heading.className = "accordion";
             heading.innerHTML = "<i data-feather='chevron-down'></i>" + minor['Name'];
-            heading.onclick = function () { $($(this)[0].nextElementSibling).toggleClass('open'); }; //onclick displays course list of each dept
+            heading.addEventListener(
+                'click',
+                function (e) {
+                    var elem = $(e.target)[0].nextElementSibling;
+                    $(elem).toggleClass('open');
+                    e.target.removeChild(e.target.childNodes[0]);
+                    innerHTML = e.target.innerHTML;
+                    if ($(elem).hasClass('open')) {
+                        e.target.innerHTML = "<i data-feather='chevron-right'></i>" + innerHTML;
+                    } else {
+                        e.target.innerHTML = "<i data-feather='chevron-down'></i>" + innerHTML;
+                    }
+                    feather.replace();
+                } //onclick displays course list of each dept
+                , false
+            )
             minorDiv.appendChild(heading);
 
             // Create list
